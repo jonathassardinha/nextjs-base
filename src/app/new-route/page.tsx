@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-export default function Home() {
+export default function NewRoute() {
 	return (
-		<main className="flex grow items-center justify-center gap-4 p-24">
+		<main className="grow flex justify-center items-center">
 			<Link
-				href="/new-route"
+				href="/"
 				className="text-blue-300 underline-offset-4 hover:text-blue-400 hover:underline"
 			>
-				New Route
+				Back to root
 			</Link>
 		</main>
 	);
