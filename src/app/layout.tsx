@@ -11,8 +11,7 @@ const fontSans = Inter({
 });
 
 export const metadata: Metadata = {
-	title: "Finance",
-	description: "Personal finance app",
+	title: "Nextjs base",
 };
 
 export default function RootLayout({
