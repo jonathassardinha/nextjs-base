@@ -1,3 +1,37 @@
 {
-  "extends": "next/core-web-vitals"
+	"overrides": [
+		{
+			"files": ["*.ts", "*.tsx", "*.js"],
+			"parser": "@typescript-eslint/parser"
+		}
+	],
+	"extends": [
+		"next/core-web-vitals",
+		"plugin:tailwindcss/recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"plugins": ["@typescript-eslint"],
+	"rules": {
+		"@typescript-eslint/no-unused-vars": [
+			"error",
+			{ "ignoreRestSiblings": true, "destructuredArrayIgnorePattern": "^_" }
+		],
+		"@typescript-eslint/no-unused-expressions": "error",
+		"tailwindcss/no-custom-classname": "off",
+		"import/order": [
+			"error",
+			{
+				"groups": [
+					"type",
+					"builtin",
+					"external",
+					"internal",
+					"parent",
+					"sibling",
+					"object",
+					"index"
+				]
+			}
+		]
+	}
 }
