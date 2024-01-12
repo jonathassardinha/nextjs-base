@@ -1,7 +1,11 @@
 {
 	"overrides": [
 		{
-			"files": ["*.ts", "*.tsx", "*.js"],
+			"files": [
+				"*.ts",
+				"*.tsx",
+				"*.js"
+			],
 			"parser": "@typescript-eslint/parser"
 		}
 	],
@@ -10,14 +14,49 @@
 		"plugin:tailwindcss/recommended",
 		"plugin:@typescript-eslint/recommended"
 	],
-	"plugins": ["@typescript-eslint"],
+	"plugins": [
+		"@typescript-eslint",
+		"@stylistic/js"
+	],
 	"rules": {
+		"indent": [
+			"error",
+			"tab"
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"quotes": [
+			"error",
+			"double"
+		],
+		"semi": [
+			"error",
+			"always"
+		],
 		"@typescript-eslint/no-unused-vars": [
 			"error",
-			{ "ignoreRestSiblings": true, "destructuredArrayIgnorePattern": "^_" }
+			{
+				"ignoreRestSiblings": true,
+				"destructuredArrayIgnorePattern": "^_"
+			}
 		],
 		"@typescript-eslint/no-unused-expressions": "error",
 		"tailwindcss/no-custom-classname": "off",
+		"tailwindcss/classnames-order": [
+			"error",
+			{
+				"callees": [
+					"classnames",
+					"clsx",
+					"ctl",
+					"cva",
+					"tv",
+					"cn"
+				]
+			}
+		],
 		"import/order": [
 			"error",
 			{
@@ -32,6 +71,14 @@
 					"index"
 				]
 			}
+		],
+		"@stylistic/js/object-curly-spacing": [
+			"error",
+			"always"
+		],
+		"@stylistic/js/array-bracket-spacing": [
+			"error",
+			"always"
 		]
 	}
 }

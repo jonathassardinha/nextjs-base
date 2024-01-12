@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config: Config = {
-	darkMode: ["class"],
+	darkMode: [ "class" ],
 	content: [
 		"./src/lib/components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -52,12 +52,12 @@ const config: Config = {
 				},
 			},
 			borderRadius: {
-				lg: `var(--radius)`,
-				md: `calc(var(--radius) - 2px)`,
+				lg: "var(--radius)",
+				md: "calc(var(--radius) - 2px)",
 				sm: "calc(var(--radius) - 4px)",
 			},
 			fontFamily: {
-				sans: ["var(--font-sans)", ...fontFamily.sans],
+				sans: [ "var(--font-sans)", ...fontFamily.sans ],
 			},
 			keyframes: {
 				"accordion-down": {
@@ -75,6 +75,6 @@ const config: Config = {
 			},
 		},
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [ require("tailwindcss-animate"), require("@tailwindcss/container-queries"), ],
 };
 export default config;

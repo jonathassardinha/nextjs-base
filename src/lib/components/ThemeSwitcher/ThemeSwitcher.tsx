@@ -1,13 +1,13 @@
 "use client";
 
-import { Themes } from "@/lib/utils/theme";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { Themes } from "@/lib/utils/theme";
 import { Skeleton } from "../Skeleton";
 
 export function ThemeSwitcher() {
-	const [mounted, setMounted] = useState(false);
+	const [ mounted, setMounted ] = useState(false);
 	const { theme, setTheme } = useTheme();
 
 	const isLightTheme = theme === Themes.Light;

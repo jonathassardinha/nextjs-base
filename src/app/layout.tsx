@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/lib/components/ThemeProvider";
 import { ThemeSwitcher } from "@/lib/components/ThemeSwitcher/ThemeSwitcher";
 
 const fontSans = Inter({
-	subsets: ["latin"],
+	subsets: [ "latin" ],
 	variable: "--font-sans",
 });
 
@@ -23,7 +23,7 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={cn(
-					"min-h-screen bg-background font-sans antialiased flex flex-col",
+					"flex min-h-screen flex-col bg-background font-sans antialiased",
 					fontSans.variable
 				)}
 			>
